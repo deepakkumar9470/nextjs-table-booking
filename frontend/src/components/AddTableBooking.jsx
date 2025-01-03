@@ -4,7 +4,6 @@ import { addBooking, getBookings } from "@/lib/actions";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 import Loader from "./Loader";
-
 const AddTableBooking = ({ openTaskAddModal, onClose }) => {
   const [formData, setFormData] = useState({
     name: "",
@@ -101,7 +100,7 @@ const AddTableBooking = ({ openTaskAddModal, onClose }) => {
                 } text-white`}
                 disabled={isLoading}
               >
-                {isLoading ? <p><Loader/> Booking...</p> : "Book"}
+                {isLoading ? <p className="flex items-center gap-2"><Loader/> Booking...</p> : "Book"}
               </button>
             </div>
           </form>
